@@ -15,7 +15,7 @@ A **Data Structure** is basically a special way to store and arrange data inside
 
 Think of it this way: You have a lot of items (*samaan*) to manage. How you arrange them determines how fast you can find what you need.
 
-* **The *Bori* (Sack) Method (Stack):** You just dump everything into a sack. If you want the item at the bottom, you have to take *everything* out first. This is a **Stack** (Last-In, First-Out).
+* **The Stack Method:** Imagine a busy Indian kitchen during a festival, where plates are being washed and piled up. The last plate washed is always the first one taken from the top for serving. This is a **Stack** (Last-In, First-Out).
 * **The *Q-line* Method (Queue):** You stand in line for *darshan* (to see a deity) or at the ration shop. The person who came **first** is the person who gets served **first**. This is a **Queue** (First-In, First-Out).
 * **The School Register Method (Array):** Your teacher has a fixed attendance register. Everyone has a specific *roll number* (0, 1, 2, 3...). You can go directly to roll number 25 without checking the previous names. This is an **Array**.
 
