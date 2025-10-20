@@ -58,4 +58,8 @@ If their programmers use a slow or inefficient algorithm, their servers will tak
 - **Solve Complex Problems:** DSA gives you a **toolkit** of proven methods to solve any big programming challenge.
 - **Get a Good Job:** Every major tech company in India and abroad tests your knowledge of DSA because it shows you can think logically and write efficient solutions.
 
+[Watch tutorial on youtube](https://youtu.be/odzV89z-2sA)
+
 In short, DSA is your roadmap to becoming a smart, high-demand programmer. Let’s start building this knowledge step by step! Ready for the next chapter?
+
+
