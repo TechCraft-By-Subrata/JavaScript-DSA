@@ -60,7 +60,7 @@ Maintaining and expanding this comprehensive resource takes time and effort. If 
 Every contribution helps cover costs, encourages faster updates, and motivates the maintainers.
 
 ➡️ **Sponsor this project:**
-[![GitHub Sponsors](https://img.shields.io/badge/-Sponsor%20on%20GitHub-red?style=flat-square&logo=github)](YOUR_GITHUB_SPONSORS_LINK)
+[![GitHub Sponsors](https://img.shields.io/badge/-Sponsor%20on%20GitHub-red?style=flat-square&logo=github)](https://github.com/sponsors/subraatakumar/)
 [![Buy Me A Coffee](https://img.shields.io/badge/-Buy%20Me%20A%20Coffee-orange?style=flat-square&logo=buy-me-a-coffee)](YOUR_BUY_ME_A_COFFEE_LINK)
 
 ---
