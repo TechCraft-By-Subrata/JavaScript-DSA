@@ -1,4 +1,4 @@
-## Chapter X: Understanding Computational Efficiency: The Power of Big O Notation 🚀
+## Chapter 3: Understanding Computational Efficiency: The Power of Big O Notation 🚀
 
 This chapter introduces **Big O Notation**, an essential concept for every programmer, regardless of experience. It's the language we use to describe how the **runtime** or **space** requirements of an algorithm grow as the size of the input increases. Mastering Big O isn't just about passing technical interviews; it's about writing efficient, scalable, and professional code.
 
