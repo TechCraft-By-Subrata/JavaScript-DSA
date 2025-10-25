@@ -35,7 +35,7 @@ Here are the essential complexities, listed from **most efficient** to **least e
 | $\mathcal{O}(n)$        | **Linear Time**      | The number of operations grows proportionally to the input size $n$.                                 | Searching for an element in an unsorted array. [realworld example](https://github.com/TechCraft-By-Subrata/JavaScript-DSA/blob/main/content/growsary_cart.md)    |
 | $\mathcal{O}(n \log n)$ | **Log-Linear Time**  | A combination of linear and logarithmic growth. Very efficient for sorting.                          | Merge Sort, Heap Sort. [Example](https://github.com/TechCraft-By-Subrata/JavaScript-DSA/blob/main/content/sorting_cards.md)                            |
 | $\mathcal{O}(n^2)$      | **Quadratic Time**   | The number of operations is proportional to the square of the input size.                            | Nested loops (e.g., Bubble Sort, Insertion Sort). [Example](https://github.com/TechCraft-By-Subrata/JavaScript-DSA/blob/main/content/sorting_cards.md) |
-| $\mathcal{O}(2^n)$      | **Exponential Time** | The number of operations doubles with every addition to the input size. **Extremely slow.**          | Finding all subsets of a set.                     |
+| $\mathcal{O}(2^n)$      | **Exponential Time** | The number of operations doubles with every addition to the input size. **Extremely slow.**          | Finding all subsets of a set. [Example](https://github.com/TechCraft-By-Subrata/JavaScript-DSA/blob/main/content/safe_craker.md)                    |
 | $\mathcal{O}(n!)$       | **Factorial Time**   | The number of operations is proportional to the factorial of the input size. **Impractically slow.** | The Traveling Salesperson Problem (Brute-force).  |
 
 ---
