@@ -171,3 +171,57 @@ The key insight into $\mathcal{O}(n \log n)$ is that **the sorting is distribute
 * **Only after Merge Level 6**—the final merge—do you combine the last two large, sorted halves into a single, fully ordered 52-card deck.
 
 The total time is the **sum** of the work done at all 6 levels: $6 \times \mathcal{O}(n) = \mathcal{O}(n \log n)$. You need all $\log n$ merging steps for the sorting to be truly complete. 
+
+## Why Spliting time is not considered ?
+
+When analyzing the **Merge Sort** algorithm, we must account for the time taken in both the **splitting (Divide)** and **merging (Conquer/Combine)** phases.
+
+However, in the context of Big O, the splitting time is considered negligible because it is effectively **included** or **dominated** by the merging time.
+
+---
+
+## Accounting for Splitting Time in $\mathcal{O}(n \log n)$
+
+Let's break down why the splitting phase does not change the final $\mathcal{O}(n \log n)$ complexity.
+
+### 1. The Cost of Splitting: $\mathcal{O}(1)$ or $\mathcal{O}(n)$?
+
+When we analyze the time spent on splitting a data structure, the cost depends heavily on **how the data is stored**:
+
+* **If the Data is an Array (like our 52-card deck represented as a list):**
+    * To "split" an array in half, we usually don't physically move the cards or copy the data. We just calculate the **middle index** and pass that index to the next recursive call.
+    * Calculating the middle index (e.g., $52 / 2 = 26$) is a single arithmetic operation.
+    * Therefore, the cost of a single split is $\mathcal{O}(1)$ (Constant Time).
+
+* **If the Data were Copied (a less optimized approach):**
+    * If the algorithm were forced to create two entirely new arrays/lists for the left and right halves, copying $n$ elements would take $\mathcal{O}(n)$ time at that step.
+
+In the standard, efficient Merge Sort implementation using indices, the time for *one split* is $\mathcal{O}(1)$.
+
+---
+
+### 2. The Total Time for Splitting
+
+Just like the merging, the splitting happens across $\log n$ levels:
+
+$$\text{Total Splitting Time} = (\text{Cost per split } \mathcal{O}(1)) \times (\text{Number of splits at each level } \approx n) \times (\text{Number of levels } \log n)$$
+
+If we assume the most efficient case ($\mathcal{O}(1)$ for a single split):
+* At the top level, we make 1 split ($\mathcal{O}(1)$ work).
+* At the next level, we make 2 splits ($\mathcal{O}(1) + \mathcal{O}(1)$ work).
+* This continues, but the *total* work across all splits sums up to be proportional to $\mathcal{O}(n)$. In fact, the total time for the splitting phase is often analyzed as $\mathcal{O}(n)$ or less, depending on the implementation details.
+
+---
+
+### 3. Combining the Total Time
+
+The total time for the Merge Sort algorithm is the sum of the time for the splitting (dividing) and the time for the merging (combining):
+
+$$\text{Total Time} = \text{Splitting Time} + \text{Merging Time}$$
+$$\text{Total Time} = \mathcal{O}(n) + \mathcal{O}(n \log n)$$
+
+Following the rules of Big O notation (dropping non-dominant terms):
+
+* The **Dominant Term** is $\mathcal{O}(n \log n)$, because it grows faster than $\mathcal{O}(n)$ as $n$ becomes large.
+
+Therefore, even when we fully account for the splitting time, the overall complexity remains **$\mathcal{O}(n \log n)$**. The merging phase is where the bulk of the computational work occurs and is the time-complexity bottleneck.
