@@ -93,15 +93,6 @@ This method, used by efficient algorithms, involves **dividing the problem** int
 
 You never waste time comparing a card against the whole deck. You only compare cards within small, temporary piles.
 
-1.  **Divide ($\mathcal{O}(\log n)$):** Split the entire deck in half, and then split those halves in half, and repeat. You keep dividing until you have many tiny piles, each with only 1 or 2 cards. **The number of times you do this dividing is very small** ($\log n$).
-2.  **Merge (  $\mathcal{O}(n)$ per level  ):** Now, start combining the tiny piles back together:
-    * Take two piles of 2 sorted cards and **merge them into one sorted pile of 4 cards.**
-    * Take two piles of 4 sorted cards and **merge them into one sorted pile of 8 cards.**
-
-**The Magic:** When you merge two *already sorted* piles (e.g., A-3 and 4-7), you can create the new sorted pile (A-7) much faster than checking every card. You only look at the top card of each pile, take the lower one, and repeat.
-
-The total amount of work (comparisons) you do at *each merging step* across the entire deck is only $n$. Since you have to do the merging $\log n$ times (once for each level of division), you get:
-
-$$\text{Total Time} \approx \mathcal{O}(\log n \text{ levels}) \times \mathcal{O}(n \text{ work per level}) = \mathcal{O}(n \log n)$$
-
 **The Advantage:** If you have 100 cards, this method only takes about **664 steps** instead of 10,000. If you double the cards to 200, the steps only go up to about 1,460—it doesn't quadruple! This makes $\mathcal{O}(n \log n)$ incredibly **scalable** and the gold standard for sorting. 
+
+
