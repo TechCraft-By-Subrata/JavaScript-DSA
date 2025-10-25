@@ -1,3 +1,5 @@
+![](https://github.com/TechCraft-By-Subrata/JavaScript-DSA/blob/main/images/phone_book.png)
+
 Excellent! $\mathcal{O}(\log n)$ or **Logarithmic Time** is one of the most powerful and desirable complexities in computer science. It describes algorithms where the time required grows very slowly, because the algorithm **eliminates large portions of the input** with each step.
 
 ***
