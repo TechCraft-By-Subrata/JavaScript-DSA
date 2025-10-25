@@ -1,3 +1,5 @@
+![](https://github.com/TechCraft-By-Subrata/JavaScript-DSA/blob/main/images/growsary_cart.jpg)
+
  $\mathcal{O}(n)$ or **Linear Time** is perhaps the most intuitive and common Big O complexity you'll encounter. It describes algorithms where the time required grows directly and proportionally with the size of the input.
 
 ***
