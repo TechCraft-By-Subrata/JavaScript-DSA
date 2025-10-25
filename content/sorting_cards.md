@@ -94,7 +94,7 @@ This method, used by efficient algorithms, involves **dividing the problem** int
 You never waste time comparing a card against the whole deck. You only compare cards within small, temporary piles.
 
 1.  **Divide ($\mathcal{O}(\log n)$):** Split the entire deck in half, and then split those halves in half, and repeat. You keep dividing until you have many tiny piles, each with only 1 or 2 cards. **The number of times you do this dividing is very small** ($\log n$).
-2.  **Merge ($\mathcal{O}(n)$ per level):** Now, start combining the tiny piles back together:
+2.  **Merge (  $\mathcal{O}(n)$ per level  ):** Now, start combining the tiny piles back together:
     * Take two piles of 2 sorted cards and **merge them into one sorted pile of 4 cards.**
     * Take two piles of 4 sorted cards and **merge them into one sorted pile of 8 cards.**
 
