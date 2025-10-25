@@ -141,7 +141,7 @@ The process starts after the initial division creates 52 piles, each containing 
 
 ## The $\mathcal{O}(n \log n)$ Conclusion
 
-The sorting is **only fully achieved** after the **final merge** in Level 6. means at  $\log n$ .
+The sorting is **only fully achieved** after the **final merge** in Level 6. means at Level -  $\log n$ .
 
 ---
 
