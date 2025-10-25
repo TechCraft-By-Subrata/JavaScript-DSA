@@ -44,7 +44,7 @@ Here are the essential complexities, listed from **most efficient** to **least e
 
 ### The Rules of Big O Analysis
 
-When determining the complexity of an algorithm, we follow three main rules to simplify the expression and focus on the **dominant term**:
+When determining the complexity of an algorithm, we follow three main rules to simplify the expression and focus on the [**dominant term**](https://github.com/TechCraft-By-Subrata/JavaScript-DSA/blob/main/content/dominant_term.md):
 
 #### 1\. Dropping Constants (Coefficients)
 
