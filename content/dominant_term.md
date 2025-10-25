@@ -1,3 +1,5 @@
+![](https://github.com/TechCraft-By-Subrata/JavaScript-DSA/blob/main/images/dominant_term.jpg)
+
 ## Deep Dive: The Dominant Term (For Beginners)
 
 In the context of **Big O Notation**, the **Dominant Term** is the part of an algorithm's complexity formula that grows the **fastest** as the input size ($n$) gets very large. It is the only term we ultimately care about when determining an algorithm's Big O complexity.
