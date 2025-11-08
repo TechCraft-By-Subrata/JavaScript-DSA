@@ -1,6 +1,3 @@
-Here’s a **unique and interview-worthy DSA problem** designed specifically for **TypeScript** arrays — structured like a **LeetCode/CodeChef** problem.
-
----
 
 ## 🧩 Problem: "Balanced Segment Split"
 
