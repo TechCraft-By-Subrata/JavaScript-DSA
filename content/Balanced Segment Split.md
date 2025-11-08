@@ -1,9 +1,148 @@
-Great — below you get **two complete TypeScript implementations** (so you can paste and run them), plus **beginner-friendly explanations** and analysis like a programming book:
+Here’s a **unique and interview-worthy DSA problem** designed specifically for **TypeScript** arrays — structured like a **LeetCode/CodeChef** problem.
 
-1. **Brute-force solution** (easy to understand; good for learning; O(n²) time).
-2. **Optimal O(n) solution** (production-ready; uses prefix/suffix unique-sum arrays).
+---
 
-Both implementations come with the same test harness (the harness from earlier). I kept the harness unchanged except I added two wrapper functions so you can switch easily between `"bruteforce"` and `"optimal"` modes. Run with `ts-node` or compile with `tsc`.
+## 🧩 Problem: "Balanced Segment Split"
+
+### **Problem Description**
+
+You are given an array of integers `nums`.
+Your task is to find the **number of ways** to split the array into **two non-empty contiguous parts** such that:
+
+* The **sum of unique elements** in the left part equals the **sum of unique elements** in the right part.
+
+Return the **count of all such possible split points**.
+
+---
+
+### **Example 1**
+
+**Input:**
+
+```typescript
+nums = [2, 3, 3, 2, 4, 5]
+```
+
+**Explanation:**
+
+All possible splits:
+
+| Split Index | Left Part       | Right Part      | Unique Sum Left | Unique Sum Right | Valid? |
+| ----------- | --------------- | --------------- | --------------- | ---------------- | ------ |
+| 1           | [2]             | [3, 3, 2, 4, 5] | 2               | 14               | ❌      |
+| 2           | [2, 3]          | [3, 2, 4, 5]    | 5               | 14               | ❌      |
+| 3           | [2, 3, 3]       | [2, 4, 5]       | 5               | 11               | ❌      |
+| 4           | [2, 3, 3, 2]    | [4, 5]          | 5               | 9                | ❌      |
+| 5           | [2, 3, 3, 2, 4] | [5]             | 9               | 5                | ❌      |
+
+✅ **No valid split**, so output is `0`.
+
+**Output:**
+
+```typescript
+0
+```
+
+---
+
+### **Example 2**
+
+**Input:**
+
+```typescript
+nums = [1, 2, 3, 1, 2]
+```
+
+**Explanation:**
+
+| Split Index | Left Part | Right Part | Unique Sum Left | Unique Sum Right | Valid? |
+| ----------- | --------- | ---------- | --------------- | ---------------- | ------ |
+| 1           | [1]       | [2,3,1,2]  | 1               | 6                | ❌      |
+| 2           | [1,2]     | [3,1,2]    | 3               | 6                | ❌      |
+| 3           | [1,2,3]   | [1,2]      | 6               | 3                | ❌      |
+| 4           | [1,2,3,1] | [2]        | 6               | 2                | ❌      |
+
+✅ **No valid split**, so output is `0`.
+
+**Output:**
+
+```typescript
+0
+```
+
+---
+
+### **Example 3**
+
+**Input:**
+
+```typescript
+nums = [1, 2, 2, 1, 3, 3]
+```
+
+**Explanation:**
+
+| Split Index | Left Part   | Right Part  | Unique Sum Left | Unique Sum Right | Valid? |
+| ----------- | ----------- | ----------- | --------------- | ---------------- | ------ |
+| 1           | [1]         | [2,2,1,3,3] | 1               | 6                | ❌      |
+| 2           | [1,2]       | [2,1,3,3]   | 3               | 6                | ❌      |
+| 3           | [1,2,2]     | [1,3,3]     | 3               | 4                | ❌      |
+| 4           | [1,2,2,1]   | [3,3]       | 3               | 3                | ✅      |
+| 5           | [1,2,2,1,3] | [3]         | 6               | 3                | ❌      |
+
+✅ Only **1 valid split** (index = 4).
+
+**Output:**
+
+```typescript
+1
+```
+
+---
+
+### **Constraints**
+
+* `1 <= nums.length <= 10^5`
+* `-10^4 <= nums[i] <= 10^4`
+
+---
+
+### **Follow-up**
+
+Can you solve this in **O(n)** time and **O(n)** space using prefix and suffix maps?
+
+---
+
+### **Function Signature (TypeScript)**
+
+```typescript
+function countBalancedSplits(nums: number[]): number
+```
+
+---
+
+### **Starter Code**
+
+```typescript
+function countBalancedSplits(nums: number[]): number {
+    // Write your code here
+    return 0;
+}
+
+// Example
+console.log(countBalancedSplits([1, 2, 2, 1, 3, 3])); // Expected output: 1
+```
+
+---
+
+### 💡 **Hints**
+
+* Use two hash maps: one for prefix unique sums and one for suffix unique sums.
+* Iterate from left to right updating the prefix, and from right to left updating the suffix.
+* Compare prefix sum and suffix sum at each possible split.
+
+---
+
 
 ---
 
