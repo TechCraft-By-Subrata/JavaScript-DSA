@@ -1,0 +1,3 @@
+## 🧩 Problem: "Maximum Subarray Product with K Removals"
+
+...existing code from previous 002...

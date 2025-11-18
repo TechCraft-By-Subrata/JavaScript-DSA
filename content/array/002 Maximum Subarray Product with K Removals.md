@@ -67,16 +67,43 @@ k = 2
 
 **Explanation:**
 
-Best strategy: Take subarray `[-2, -3, 4, -5]` and remove `-5` and one other element strategically.
+Let's understand why the best strategy works step by step.
 
-Actually, consider `[1, -2, -3, 4]`:
-- Remove `-2, -3`: product = `1 × 4 = 4`
+**Key Concept:** When dealing with products and negative numbers:
+- **Two negatives multiply to make a positive**: `(-2) × (-3) = 6` ✅
+- **Three negatives multiply to make a negative**: `(-2) × (-3) × (-5) = -30` ❌
+- **An even count of negatives gives positive product**
+- **An odd count of negatives gives negative product**
 
-Consider `[-2, -3, 4, -5]`:
-- Remove `-5, 4`: product = `(-2) × (-3) = 6`
-- Remove `-2, -5`: product = `(-3) × 4 = -12`
-- Remove `-3, -5`: product = `(-2) × 4 = -8`
-- Keep `-2, -3, 4`: product = `(-2) × (-3) × 4 = 24` ✅
+Now let's explore different subarrays:
+
+**Option 1:** Subarray `[1, -2, -3, 4]` (remove the `-5` from consideration)
+- Has 2 negatives (even count) → could give positive product
+- Remove both negatives `-2, -3`: product = `1 × 4 = 4`
+- Keep all: product = `1 × (-2) × (-3) × 4 = 24` ✅
+
+**Option 2:** Subarray `[-2, -3, 4, -5]` (remove the `1` from consideration)
+- Has 3 negatives (odd count) → without removal, product is negative
+- If we keep all: product = `(-2) × (-3) × 4 × (-5) = -120` ❌
+- **Strategy:** Remove just the last negative `-5` to make count even
+  - After removing `-5`: we have `[-2, -3, 4]`
+  - Product = `(-2) × (-3) × 4 = 24` ✅ (only used k=1 removal)
+
+**Why is 24 the maximum?**
+
+The subarray `[-2, -3, 4]` (or equivalently `[1, -2, -3, 4]` without the `1`) gives us:
+- **Two negatives** that multiply together to become positive: `(-2) × (-3) = 6`
+- Then multiply by the positive `4`: `6 × 4 = 24`
+
+We only needed to remove one element (the `-5`), leaving one removal unused. The key insight is:
+> **When you have an odd number of negatives, removing just ONE negative makes the product positive, which is almost always better than keeping an odd number of negatives.**
+
+**Summary of attempts:**
+- `[1, -2, -3, 4]` without removals: `1 × (-2) × (-3) × 4 = 24` ✅
+- `[-2, -3, 4]` without removals: `(-2) × (-3) × 4 = 24` ✅
+- `[-2, -3, 4, -5]` remove `-5`: `(-2) × (-3) × 4 = 24` ✅
+
+All paths lead to **24** as the maximum!
 
 **Output:**
 
@@ -289,32 +316,92 @@ function productOfArray(arr: number[]): number {
 /**
  * Generate all combinations of removing exactly r elements from array
  * Returns array of arrays (each is the remaining elements after removal)
+ * 
+ * SIMPLEST APPROACH: Just iterate through all possible bitmasks
+ * - No recursion, no generators
+ * - Uses simple for loops
+ * - Very beginner friendly!
+ * 
+ * Think of it like light switches: each element can be ON (keep) or OFF (remove)
+ * We try all possible ON/OFF combinations and pick ones with exactly r elements OFF
  */
-function* combinationsRemove(arr: number[], r: number): Generator<number[]> {
+function combinationsRemove(arr: number[], r: number): number[][] {
   const n = arr.length;
+  
+  // Base case: if removing 0 elements, return the original array
   if (r === 0) {
-    yield [...arr];
-    return;
-  }
-  if (r >= n) {
-    // Can't remove more elements than we have
-    return;
+    return [[...arr]];
   }
   
-  // Use bit manipulation to generate combinations of indices to remove
-  const totalCombinations = 1 << n; // 2^n
+  // Base case: can't remove more elements than we have
+  if (r >= n || r < 0) {
+    return [];
+  }
+  
+  const result: number[][] = [];
+  
+  // Generate all possible combinations using a number from 0 to 2^n - 1
+  // Each bit represents whether to remove (1) or keep (0) an element
+  const totalCombinations = Math.pow(2, n); // or: 1 << n
+  
   for (let mask = 0; mask < totalCombinations; mask++) {
-    const bitsSet = mask.toString(2).split('0').join('').length;
-    if (bitsSet === r) {
+    // Count how many bits are set to 1 (how many elements to remove)
+    let removeCount = 0;
+    for (let i = 0; i < n; i++) {
+      if (mask & (1 << i)) {
+        removeCount++;
+      }
+    }
+    
+    // Only process if this combination removes exactly r elements
+    if (removeCount === r) {
       const remaining: number[] = [];
       for (let i = 0; i < n; i++) {
+        // If bit i is 0, keep the element
         if ((mask & (1 << i)) === 0) {
           remaining.push(arr[i]);
         }
       }
-      yield remaining;
+      result.push(remaining);
     }
   }
+  
+  return result;
+}
+
+/**
+ * EVEN SIMPLER ALTERNATIVE (if bit operations are confusing):
+ * Generate combinations by trying all possible ways to pick which indices to KEEP
+ * This uses nested loops for small r values (practical for k ≤ 3)
+ */
+function combinationsRemoveSimple(arr: number[], r: number): number[][] {
+  const n = arr.length;
+  const keepCount = n - r; // How many elements to keep
+  
+  if (r === 0) return [[...arr]];
+  if (r >= n || r < 0) return [];
+  
+  const result: number[][] = [];
+  
+  // Helper: generate all ways to choose 'keepCount' indices from n elements
+  function generateCombinations(start: number, chosen: number[]) {
+    // If we've chosen enough indices, create the result array
+    if (chosen.length === keepCount) {
+      const remaining = chosen.map(i => arr[i]);
+      result.push(remaining);
+      return;
+    }
+    
+    // Try each possible next index
+    for (let i = start; i < n; i++) {
+      chosen.push(i);
+      generateCombinations(i + 1, chosen);
+      chosen.pop();
+    }
+  }
+  
+  generateCombinations(0, []);
+  return result;
 }
 
 /* ============================
@@ -348,7 +435,8 @@ function maxProductWithKRemovalsBruteForce(nums: number[], k: number): number {
           maxProd = Math.max(maxProd, prod);
         } else {
           // Generate all combinations of removing exactly removeCount elements
-          for (const remaining of combinationsRemove(subarray, removeCount)) {
+          const allCombinations = combinationsRemove(subarray, removeCount);
+          for (const remaining of allCombinations) {
             if (remaining.length > 0) {
               const prod = productOfArray(remaining);
               maxProd = Math.max(maxProd, prod);
