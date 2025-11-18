@@ -159,7 +159,7 @@ const cgen = cleanupGen();
 cgen.next(); // Yields 1
 
 // Force the generator to terminate:
-cgen.return('Finished');
+cgen.return();
 // Output: Generator cleanup complete.
 //         { value: 'Finished', done: true }
 ```
