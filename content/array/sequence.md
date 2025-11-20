@@ -1,43 +1,43 @@
 [1] Two Sum — Array (classic)
 [15] 3Sum — Array (classic)
 [18] 4Sum — Array (classic)
-[26] Remove Duplicates from Sorted Array — Array
-[31] Next Permutation — Array
-[33] Search in Rotated Sorted Array — Array
-[35] Search Insert Position — Array
-[41] First Missing Positive — Array
-[42] Trapping Rain Water — Array
-[53] Maximum Subarray — Array
-[54] Spiral Matrix — Array/Matrix
-[55] Jump Game — Array
-[56] Merge Intervals — Array of intervals
-[59] Spiral Matrix II — Array/Matrix
-[66] Plus One — Array
-[73] Set Matrix Zeroes — Array/Matrix
-[74] Search a 2D Matrix — Array/Matrix
-[79] Word Search — Array/Matrix
-[88] Merge Sorted Array — Array
-[152] Maximum Product Subarray — Array
-[198] House Robber — Array (DP)
-[215] Kth Largest Element in an Array — Array
-[217] Contains Duplicate — Array
-[219] Contains Duplicate II — Array
-[220] Contains Duplicate III — Array
-[238] Product of Array Except Self — Array
-[239] Sliding Window Maximum — Array
-[274] H-Index — Array
-[279] Perfect Squares — Array/DP
-[287] Find the Duplicate Number — Array
-[300] Longest Increasing Subsequence — Array
-[315] Count of Smaller Numbers After Self — Array
-[368] Largest Divisible Subset — Array
-[387] First Unique Character in a String — Array/Hash
-[525] Contiguous Array — Array
-[560] Subarray Sum Equals K — Array
-[561] Array Partition I — Array
-[617] Merge Two Binary Trees — Array/Tree
-[703] Kth Largest Element in a Stream — Array/Heap
-[728] Self Dividing Numbers — Array
-[739] Daily Temperatures — Array
-[977] Squares of a Sorted Array — Array
-[1470] Shuffle the Array — Array
+[007] Remove Duplicates from Sorted Array — Array
+[008] Next Permutation — Array
+[009] Search in Rotated Sorted Array — Array
+[010] Search Insert Position — Array
+[011] First Missing Positive — Array
+[012] Trapping Rain Water — Array
+[013] Maximum Subarray — Array
+[014] Spiral Matrix — Array/Matrix
+[015] Jump Game — Array
+[016] Merge Intervals — Array of intervals
+[017] Spiral Matrix II — Array/Matrix
+[018] Plus One — Array
+[019] Set Matrix Zeroes — Array/Matrix
+[020] Search a 2D Matrix — Array/Matrix
+[021] Word Search — Array/Matrix
+[022] Merge Sorted Array — Array
+[023] Maximum Product Subarray — Array
+[024] House Robber — Array (DP)
+[025] Kth Largest Element in an Array — Array
+[026] Contains Duplicate — Array
+[027] Contains Duplicate II — Array
+[028] Contains Duplicate III — Array
+[029] Product of Array Except Self — Array
+[030] Sliding Window Maximum — Array
+[031] H-Index — Array
+[032] Perfect Squares — Array/DP
+[033] Find the Duplicate Number — Array
+[034] Longest Increasing Subsequence — Array
+[035] Count of Smaller Numbers After Self — Array
+[036] Largest Divisible Subset — Array
+[037] First Unique Character in a String — Array/Hash
+[038] Contiguous Array — Array
+[039] Subarray Sum Equals K — Array
+[040] Array Partition I — Array
+[041] Merge Two Binary Trees — Array/Tree
+[042] Kth Largest Element in a Stream — Array/Heap
+[043] Self Dividing Numbers — Array
+[044] Daily Temperatures — Array
+[045] Squares of a Sorted Array — Array
+[046] Shuffle the Array — Array
