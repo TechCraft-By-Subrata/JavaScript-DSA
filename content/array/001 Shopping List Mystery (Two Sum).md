@@ -1,3 +1,4 @@
+**Difficulty:** Beginner
 ## 🧩 Problem: "The Shopping List Mystery"
 
 ### **Story**
@@ -88,3 +89,28 @@ console.log(shoppingListMystery([1, 4, 5, 6], 10)); // Expected output: [1, 3]
 * Use a hash map to store prices you’ve seen so far.
 * For each price, check if (budget - price) is already in the map.
 * Return the indices as soon as you find a match.
+
+---
+
+### 🚀 Where is this asked?
+This problem (Two Sum) is extremely popular in coding interviews at top companies:
+- Google
+- Amazon
+- Microsoft
+- Facebook
+- Flipkart
+- Goldman Sachs
+- Uber
+- Atlassian
+- Paytm
+- Swiggy
+- Zomato
+
+**Relevant Roles:**
+- Software Engineer (SDE)
+- Backend Developer
+- Frontend Developer
+- Data Scientist
+- Algorithm Engineer
+
+This problem is a classic warm-up for technical interviews and is often used to test basic problem-solving and coding skills.
