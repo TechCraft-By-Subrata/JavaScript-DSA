@@ -1,5 +1,5 @@
 
-**Difficulty:** Easy-Medium
+**Difficulty:** Beginner
 ## 🧩 Problem: "Grocery Bazaar Challenge"
 
 ### **Story**
