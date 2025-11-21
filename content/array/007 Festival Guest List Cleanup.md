@@ -1,3 +1,4 @@
+**Difficulty:** Beginner
 ## 🧩 Problem: "Festival Guest List Cleanup"
 
 ### **Story**
@@ -75,3 +76,57 @@ console.log(festivalGuestListCleanup([9123456789, 9123456789, 9123456789])); // 
 * Use two pointers to overwrite duplicates in the array.
 * Only keep the first occurrence of each phone number.
 * Return the count of unique guests.
+
+---
+
+### 🚀 Where is this asked?
+This problem (Remove Duplicates from Sorted Array) is frequently asked in coding interviews at top companies:
+- Google
+- Amazon
+- Microsoft
+- Facebook
+- Flipkart
+- Goldman Sachs
+- Uber
+- Atlassian
+- Paytm
+- Swiggy
+- Zomato
+- Apple
+- Adobe
+- Oracle
+- Infosys
+- TCS
+- Cognizant
+- Capgemini
+- HCL Technologies
+- Wipro
+- JP Morgan Chase
+- Morgan Stanley
+- HSBC
+- SAP
+- Salesforce
+- LinkedIn
+- Twitter
+- Meesho
+- Razorpay
+- PhonePe
+- Byju's
+- Dream11
+- InMobi
+- Ola
+- Oyo
+- Practo
+- Freshworks
+- Mindtree
+- L&T Infotech
+
+**Relevant Roles:**
+- Frontend Developer (JavaScript/TypeScript)
+- Backend Developer
+- Full Stack Developer
+- Software Engineer (Entry to Mid-level)
+- Data Analyst/Engineer (for algorithmic thinking)
+- Technical Interview Candidate
+
+This problem is used to test two-pointer technique, edge case handling, and efficient coding skills for real-world scenarios.
