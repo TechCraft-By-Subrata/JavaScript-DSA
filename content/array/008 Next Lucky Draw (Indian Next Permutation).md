@@ -1,3 +1,4 @@
+**Difficulty:** Intermediate
 ## 🧩 Problem: "Next Lucky Draw"
 
 ### **Story**
@@ -88,6 +89,8 @@ console.log(nextLuckyDraw([1, 1, 5])); // Expected output: [1, 5, 1]
 * Find the first index from the end where tickets[i] < tickets[i+1].
 * Swap it with the smallest number greater than it to the right.
 * Reverse the part of the array after the swapped index.
+
+---
 
 ---
 
