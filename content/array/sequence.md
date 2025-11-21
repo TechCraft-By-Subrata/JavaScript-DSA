@@ -1,6 +1,6 @@
-[1] Two Sum — Array (classic)
-[15] 3Sum — Array (classic)
-[18] 4Sum — Array (classic)
+[001] Two Sum — Array (classic)
+[002] 3Sum — Array (classic)
+[003] 4Sum — Array (classic)
 [007] Remove Duplicates from Sorted Array — Array
 [008] Next Permutation — Array
 [009] Search in Rotated Sorted Array — Array
