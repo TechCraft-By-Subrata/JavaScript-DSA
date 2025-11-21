@@ -1,3 +1,5 @@
+
+**Difficulty:** Easy-Medium
 ## 🧩 Problem: "Grocery Bazaar Challenge"
 
 ### **Story**
@@ -78,3 +80,57 @@ console.log(groceryBazaarChallenge([10, 25, 30, 40], 55)); // Expected output: [
 * Use a hash map to store prices you’ve seen so far.
 * For each price, check if (budget - price) is already in the map.
 * Return the indices as soon as you find a match.
+
+---
+
+### 🚀 Where is this asked?
+This problem (Two Sum) is frequently asked in coding interviews at top companies:
+- Google
+- Amazon
+- Microsoft
+- Facebook
+- Flipkart
+- Goldman Sachs
+- Uber
+- Atlassian
+- Paytm
+- Swiggy
+- Zomato
+- Apple
+- Adobe
+- Oracle
+- Infosys
+- TCS
+- Cognizant
+- Capgemini
+- HCL Technologies
+- Wipro
+- JP Morgan Chase
+- Morgan Stanley
+- HSBC
+- SAP
+- Salesforce
+- LinkedIn
+- Twitter
+- Meesho
+- Razorpay
+- PhonePe
+- Byju's
+- Dream11
+- InMobi
+- Ola
+- Oyo
+- Practo
+- Freshworks
+- Mindtree
+- L&T Infotech
+
+**Relevant Roles:**
+- Frontend Developer (JavaScript/TypeScript)
+- Backend Developer
+- Full Stack Developer
+- Software Engineer (Entry to Mid-level)
+- Data Analyst/Engineer (for algorithmic thinking)
+- Technical Interview Candidate
+
+This problem is used to test hash map usage, edge case handling, and efficient coding skills for real-world scenarios.
